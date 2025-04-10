@@ -1,0 +1,10 @@
+<log level="custom">
+    <property name="IN_MESSAGE" value="Regular_expression_policy"/>
+</log>
+<property name="threatType" expression="get-property('threatType')" value="SQL-Injection"/>
+<property name="regex" expression="get-property('regex')" value={{regexPattern}}/>
+<property name="mask" expression="get-property('mask')" value={{mask}}/>
+<property name="enabledCheckBody" expression="get-property('checkBodyEnable')" value="true"/>
+<property name="enabledCheckHeaders" expression="get-property('enabledCheckHeaders')" value="false"/>
+<property name="enabledCheckPathParams" expression="get-property('enabledCheckPathParams')" value="false"/>
+<class name="org.wso2.carbon.apimgt.gateway.mediators.ai.guardrails.RegularExpressionProtector"/>

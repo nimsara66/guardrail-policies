@@ -1,0 +1,36 @@
+type: operation_policy_specification
+version: v4.5.0
+data:
+  category: Mediation
+  name: JS
+  version: v1
+  displayName: JS
+  description: ""
+  applicableFlows:
+   - response
+  supportedGateways:
+   - Synapse
+  supportedApiTypes:
+   - HTTP
+  policyAttributes:
+   -
+    name: jsonSchema
+    displayName: jsonSchema
+    description: ""
+    type: String
+    allowedValues: []
+    required: true
+   -
+    name: jsonProperty
+    displayName: jsonProperty
+    description: ""
+    type: String
+    allowedValues: []
+    required: false
+   -
+    name: inverse
+    displayName: inverse
+    description: ""
+    type: Boolean
+    allowedValues: []
+    required: false

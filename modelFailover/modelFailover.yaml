@@ -1,0 +1,25 @@
+type: operation_policy_specification
+version: v4.5.0
+data:
+  category: Mediation
+  name: modelFailover
+  version: v1
+  displayName: Model Failover
+  description: "This policy enables traffic rerouting to one or more fallback models if the target model fails, ensuring continued availability"
+  applicableFlows:
+   - request
+  supportedGateways:
+   - Synapse
+  supportedApiTypes:
+   -
+    subType: AIAPI
+    apiType: HTTP
+  policyAttributes:
+   -
+    name: failoverConfigs
+    displayName: Failover Configurations
+    description: Configurations for the failover policy
+    validationRegex: ^.+$
+    type: String
+    allowedValues: []
+    required: true

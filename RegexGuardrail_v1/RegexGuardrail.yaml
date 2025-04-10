@@ -1,0 +1,33 @@
+type: operation_policy_specification
+version: v4.5.0
+data:
+  category: Mediation
+  name: RegexGuardrail
+  version: v1
+  displayName: RegexGuardrail
+  description: This is a Regular Expression Guardrail that validates content based on the pattern you define. The regex policy builds the entire message and performs string processing to find potentially harmful constructs underneath the message body. This drops the performance of 10KB messages for 300 concurrent users by 3.6 times than the normal flow. The performance decrease may accelerate along with the message size
+  applicableFlows:
+   - request
+   - response
+   - fault
+  supportedGateways:
+   - Synapse
+  supportedApiTypes:
+   - HTTP
+  policyAttributes:
+   -
+    name: regexPattern
+    displayName: Regex pattern
+    description: This is the guardrail regex pattern
+    validationRegex: (.*?)
+    type: String
+    allowedValues: []
+    required: true
+   -
+    name: mask
+    displayName: Maks to apply
+    description: Mask the found text with ...
+    validationRegex: (.*?)
+    type: String
+    allowedValues: []
+    required: false
