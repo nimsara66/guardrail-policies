@@ -1,0 +1,40 @@
+type: operation_policy_specification
+version: v4.5.0
+data:
+  category: Mediation
+  name: jsonSchemaGuardrail
+  version: v1
+  displayName: JSON Schema Guardrail
+  description: "This policy guarentees selected flow request/ response payload adhere to a give json schema"
+  applicableFlows:
+   - 
+    request
+    response
+  supportedGateways:
+   - Synapse
+  supportedApiTypes:
+   -
+    subType: AIAPI
+    apiType: HTTP
+  policyAttributes:
+   -
+    name: jsonSchema
+    displayName: JSON Schema
+    description: JSON Schema to adhere to
+    type: JSON
+    allowedValues: []
+    required: true
+   -
+    name: jsonProperty
+    displayName: JSON Property
+    description: JSON Property to inspect
+    type: String
+    allowedValues: []
+    required: true
+   -
+    name: doInvert
+    displayName: Invert
+    description: Invert the result
+    type: Boolean
+    allowedValues: []
+    required: true
