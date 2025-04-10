@@ -7,9 +7,8 @@ data:
   displayName: JSON Schema Guardrail
   description: "This policy guarentees selected flow request/ response payload adhere to a give json schema"
   applicableFlows:
-   - 
-    request
-    response
+   - request
+   - response
   supportedGateways:
    - Synapse
   supportedApiTypes:
