@@ -1,0 +1,80 @@
+type: operation_policy_specification
+version: v4.5.0
+data:
+  category: Mediation
+  name: AWSBedrockGuardrail
+  version: v1
+  displayName: AWS Bedrock Guardrail
+  description: "This policy ensures that the request and response payloads for selected flows comply with the integration standards of AWS Bedrock Guardrails."
+  applicableFlows:
+   - request
+   - response
+  supportedGateways:
+   - Synapse
+  supportedApiTypes:
+   -
+    apiType: HTTP
+  policyAttributes:
+   -
+    name: accessKey
+    displayName: AWS Access Key ID
+    description: JSON Schema to adhere to
+    type: String
+    allowedValues: []
+    required: true
+   -
+    name: secretKey
+    displayName: AWS Secret Access Key
+    description: JSON Schema to adhere to
+    type: String
+    allowedValues: []
+    required: true
+   -
+    name: region
+    displayName: AWS Region
+    description: AWS Service Region
+    type: String
+    allowedValues: []
+    required: true
+   -
+    name: serviceName
+    displayName: AWS Service Name
+    description: AWS Service Name
+    type: String
+    allowedValues: []
+    required: true
+   -
+    name: guardrailId
+    displayName: AWS Bedrock Guardrail ID
+    description: AWS Bedrock Guardrail ID
+    type: String
+    allowedValues: []
+    required: true
+   -
+    name: guardrailVersion
+    displayName: AWS Bedrock Guardrail Version
+    description: AWS Bedrock Guardrail Version
+    type: String
+    allowedValues: []
+    required: true
+   -
+    name: sessionToken
+    displayName: AWS Session Token
+    description: AWS Session Token
+    type: String
+    allowedValues: []
+    required: false
+   -
+    name: jsonPath
+    displayName: JSON Path
+    description: JSON Path to inspect
+    type: String
+    allowedValues: []
+    required: true
+   -
+    name: redactPII
+    displayName: Redact PII
+    description: Redact PII from payload
+    type: Boolean
+    allowedValues: []
+    required: false
