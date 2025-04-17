@@ -36,13 +36,6 @@ data:
     allowedValues: []
     required: true
    -
-    name: serviceName
-    displayName: AWS Service Name
-    description: "AWS Service Name"
-    type: String
-    allowedValues: []
-    required: true
-   -
     name: guardrailId
     displayName: AWS Bedrock Guardrail ID
     description: "AWS Bedrock Guardrail ID"
@@ -61,6 +54,13 @@ data:
     displayName: AWS Session Token
     description: "[Optional] AWS Session Token"
     type: String
+    allowedValues: []
+    required: false
+   -
+    name: timeout
+    displayName: AWS Guardrail Request Timeout
+    description: "AWS Guardrail Request Timeout"
+    type: Integer
     allowedValues: []
     required: false
    -
