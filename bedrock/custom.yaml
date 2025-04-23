@@ -24,7 +24,7 @@ data:
    -
     name: secretKey
     displayName: AWS Secret Access Key
-    description: "Enter your AWS Secret Access Ke"
+    description: "Enter your AWS Secret Access Key"
     type: String
     allowedValues: []
     required: true
