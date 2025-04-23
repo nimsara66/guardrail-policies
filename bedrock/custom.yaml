@@ -1,0 +1,100 @@
+type: operation_policy_specification
+version: v4.5.0
+data:
+  category: Mediation
+  name: AWSBedrockGuardrail
+  version: v1
+  displayName: AWS Bedrock Guardrail
+  description: "This policy ensures that the request and response payloads for selected flows comply with the integration standards of AWS Bedrock Guardrails."
+  applicableFlows:
+   - request
+   - response
+  supportedGateways:
+   - Synapse
+  supportedApiTypes:
+   - HTTP
+  policyAttributes:
+   -
+    name: accessKey
+    displayName: AWS Access Key ID
+    description: "Enter your AWS Access Key ID"
+    type: String
+    allowedValues: []
+    required: true
+   -
+    name: secretKey
+    displayName: AWS Secret Access Key
+    description: "Enter your AWS Secret Access Ke"
+    type: String
+    allowedValues: []
+    required: true
+   -
+    name: region
+    displayName: AWS Region
+    description: "AWS Service Region"
+    type: String
+    allowedValues: []
+    required: true
+   -
+    name: guardrailId
+    displayName: AWS Bedrock Guardrail ID
+    description: "AWS Bedrock Guardrail ID"
+    type: String
+    allowedValues: []
+    required: true
+   -
+    name: guardrailVersion
+    displayName: AWS Bedrock Guardrail Version
+    description: "AWS Bedrock Guardrail Version"
+    type: String
+    allowedValues: []
+    required: true
+   -
+    name: sessionToken
+    displayName: AWS Session Token
+    description: "[Optional] AWS Session Token"
+    type: String
+    allowedValues: []
+    required: false
+   -
+    name: roleArn
+    displayName: AWS Assume Role ARN
+    description: "[Optional] AWS Role ARN for AssumeRole"
+    type: String
+    allowedValues: []
+    required: false
+   -
+    name: roleRegion
+    displayName: AWS Assume Role Region
+    description: "[Optional] AWS Role Region for AssumeRole"
+    type: String
+    allowedValues: []
+    required: false
+   -
+    name: roleExternalId
+    displayName: AWS Assume Role External ID
+    description: "[Optional] AWS Role External ID for AssumeRole"
+    type: String
+    allowedValues: []
+    required: false
+   -
+    name: timeout
+    displayName: AWS Guardrail Request Timeout
+    description: "AWS Guardrail Request Timeout"
+    type: Integer
+    allowedValues: []
+    required: false
+   -
+    name: jsonPath
+    displayName: JSON Path
+    description: "JSON Path to inspect"
+    type: String
+    allowedValues: []
+    required: false
+   -
+    name: redactPII
+    displayName: Redact PII
+    description: "Redact PII from payload"
+    type: Boolean
+    allowedValues: []
+    required: false
